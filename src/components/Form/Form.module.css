@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 40px;
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.label {
+  color: deepskyblue;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.input {
+  width: 400px;
+  line-height: 2;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: grey;
+}
+
+.btn {
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
