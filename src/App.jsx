@@ -1,32 +1,27 @@
-import { useEffect, useState } from "react";
-import { apiMovies } from "./api/api-movies.js";
-import HomePage from "./pages/HomePage/HomePage.jsx";
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navigation/Navigation.jsx";
+import HomePage from "./pages/HomePage/HomePage.jsx";
+import MoviesPage from "./pages/MoviesPage/MoviesPage.jsx";
+import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage.jsx";
+import MovieCast from "./components/MovieCast/MovieCast.jsx";
+import MovieReviews from "./components/MovieReviews/MovieReviews.jsx";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.jsx";
 
 function App() {
-  const [trendMovie, setTrendMovie] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        setLoading(true);
-        const data = await apiMovies();
-        setTrendMovie(data);
-      } catch (error) {
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-    getData();
-  }, []);
   return (
-    <>
-      <HomePage trendMovie={trendMovie} />
-      {loading && <p>Loading...</p>}
-      {error && <p>Error!!!</p>}
-    </>
+    <div>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/movies" element={<MoviesPage />} />
+        <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
+          <Route path="/movies/:movieId/cast" element={<MovieCast />} />
+          <Route path="/movies/:movieId/reviews" element={<MovieReviews />} />
+        </Route>
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </div>
   );
 }
 
