@@ -6,8 +6,8 @@ const HomePage = ({ trendMovie }) => {
     <>
       <Navigation />
       <div className={css.container}>
-        <h1>Trending today</h1>
-        <ul>
+        <h1 className={css.title}>Trending today</h1>
+        <ul className={css.list}>
           {trendMovie.length > 0 &&
             trendMovie.map((movie) => <li key={movie.id}>{movie.title}</li>)}
         </ul>

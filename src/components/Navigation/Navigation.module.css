@@ -1,0 +1,23 @@
+.nav {
+  background-color: grey;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(202, 197, 197, 0.3);
+}
+
+.list {
+  padding-inline-start: 60px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.list {
+  font-size: 18px;
+  line-height: 1;
+}

@@ -23,9 +23,9 @@ function App() {
   }, []);
   return (
     <>
+      <HomePage trendMovie={trendMovie} />
       {loading && <p>Loading...</p>}
       {error && <p>Error!!!</p>}
-      <HomePage trendMovie={trendMovie} />
     </>
   );
 }
