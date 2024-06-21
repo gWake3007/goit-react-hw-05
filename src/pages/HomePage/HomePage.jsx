@@ -1,6 +1,7 @@
 import css from "./HomePage.module.css";
 import { useEffect, useState } from "react";
-import { apiMovies } from "../../api/api-movies";
+import { apiTrendingMovies } from "../../api/api-movies";
+import MovieList from "../../components/MovieList/MovieList";
 
 const HomePage = () => {
   const [trendMovie, setTrendMovie] = useState([]);
@@ -10,7 +11,7 @@ const HomePage = () => {
     const getData = async () => {
       try {
         setLoading(true);
-        const data = await apiMovies();
+        const data = await apiTrendingMovies();
         setTrendMovie(data);
       } catch (error) {
         setError(true);
@@ -26,10 +27,7 @@ const HomePage = () => {
         <h1 className={css.title}>Trending today</h1>
         {loading && <p>Loading...</p>}
         {error && <p>Error!!!</p>}
-        <ul className={css.list}>
-          {trendMovie.length > 0 &&
-            trendMovie.map((movie) => <li key={movie.id}>{movie.title}</li>)}
-        </ul>
+        <MovieList movies={trendMovie} />
       </div>
     </>
   );

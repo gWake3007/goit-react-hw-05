@@ -1,0 +1,8 @@
+.title {
+  padding-bottom: 20px;
+}
+
+.list li {
+  text-decoration: underline;
+  color: rgb(100, 100, 226);
+}
