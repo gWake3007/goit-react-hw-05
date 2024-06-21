@@ -20,15 +20,13 @@ export const apiTrendingMovies = async () => {
 export const apiSearchMovies = async (qwery) => {
   const { data } = await axios.get(`/search/movie?query=${qwery}`, options);
   console.log(data.results);
-  console.log(data);
-  return data;
+  return data.results;
 };
 
 export const apiMovies = async (movieId) => {
   const { data } = await axios.get(`/movie/${movieId}`, options);
   console.log(data.results);
-  console.log(data);
-  return data;
+  return data.results;
 };
 
 export const IMAGE_URL = "https://image.tmdb.org/t/p/w500";
