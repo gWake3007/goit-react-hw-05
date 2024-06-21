@@ -1,10 +1,10 @@
 import css from "./MoviesPage.module.css";
-import Form from "../../components/Form/Form";
+import SearchForm from "../../components/SearchForm/SearchForm";
 
 const MoviesPage = () => {
   return (
     <div className={css.container}>
-      <Form />
+      <searchForm />
     </div>
   );
 };

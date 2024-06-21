@@ -18,7 +18,7 @@ export const apiTrendingMovies = async () => {
 };
 
 export const apiSearchMovies = async (qwery) => {
-  const { data } = await axios.get(`/search/movie${qwery}`, options);
+  const { data } = await axios.get(`/search/movie?query=${qwery}`, options);
   console.log(data.results);
   console.log(data);
   return data;
