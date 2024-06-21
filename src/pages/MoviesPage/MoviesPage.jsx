@@ -2,7 +2,7 @@ import css from "./MoviesPage.module.css";
 import SearchForm from "../../components/SearchForm/SearchForm";
 import MovieList from "../../components/MovieList/MovieList";
 import { useState, useEffect, useCallback } from "react";
-import { useSearchParams, useLocation } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { apiSearchMovies } from "../../api/api-movies";
 
 const MoviesPage = () => {
@@ -12,8 +12,6 @@ const MoviesPage = () => {
   const [notResults, setNotResults] = useState(false);
 
   const [params, setParams] = useSearchParams();
-  const location = useLocation();
-  console.log(location);
 
   const handleSearch = useCallback(
     (qwery) => {
