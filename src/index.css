@@ -18,6 +18,7 @@ a {
 
 ul {
   list-style: none;
+  padding-inline-start: 0px;
 }
 
 body {
@@ -27,6 +28,10 @@ body {
 h1 {
   font-size: 2.2em;
   line-height: 1.1;
+}
+
+p {
+  line-height: 1;
 }
 
 @media (prefers-color-scheme: light) {

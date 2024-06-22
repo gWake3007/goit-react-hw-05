@@ -27,3 +27,5 @@ export const apiMovies = async (movieId) => {
 };
 
 export const IMAGE_URL = "https://image.tmdb.org/t/p/w500";
+export const PAGE_NOT_FOUND =
+  "https://img.freepik.com/free-vector/oops-404-error-with-a-broken-robot-concept-illustration_114360-5529.jpg";
