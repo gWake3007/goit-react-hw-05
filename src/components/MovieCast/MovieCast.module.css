@@ -1,0 +1,55 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.item {
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: 320px;
+}
+
+.item img {
+  max-height: 480px;
+  max-width: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item .imgCard {
+  min-height: 480px;
+  min-width: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: grey;
+}
+
+.imgCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: red;
+}
+
+.nameNotPage {
+  color: black;
+  font-size: 22px;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  text-align: center;
+}
+
+.characterName {
+  text-align: center;
+}

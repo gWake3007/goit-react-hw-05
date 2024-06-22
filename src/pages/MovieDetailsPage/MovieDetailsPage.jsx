@@ -18,7 +18,7 @@ const getClassNames = ({ isActive }) => {
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const location = useLocation();
-  const backLocation = useRef(location.state ?? "/products");
+  const backLocation = useRef(location.state?.from ?? "/");
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
